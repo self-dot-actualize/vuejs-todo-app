@@ -5,6 +5,8 @@
     <button v-on:click="addTask()">Add task</button>
   </div>
   <h1>Tasks</h1>
+  <h5>Number of tasks: {{ tasks.length }}</h5>
+  <h5>Number of incomplete tasks: {{ numberOfIncompleteTasks() }}</h5>
   <ul>
     <li v-for="task in tasks" v-on:click="toggleComplete(task)" v-bind:class="{finished: task.completed}">
       {{ task.text }}
