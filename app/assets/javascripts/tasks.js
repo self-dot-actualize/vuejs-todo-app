@@ -27,7 +27,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         }
         return count;
+      },
+      removeCompletedTasks: function() {
+        var incompleteTasks = [];
+        for (var i = 0; i < this.tasks.length; i++) {
+          if (!this.tasks[i].completed) {
+            incompleteTasks.push(this.tasks[i]);
+          }
+        }
+        this.tasks = incompleteTasks;
       }
     }
   });
 });
+
+var array = [1, "a", "b", 334, "a", 3, 34, "w"];
+// delete all letters from the array
+// OR
+// create a new array that only contains the numbers
