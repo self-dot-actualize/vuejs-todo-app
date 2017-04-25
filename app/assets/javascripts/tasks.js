@@ -7,7 +7,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         {text: 'Take out the garbage', completed: false},
         {text: 'Make the bed', completed: false},
         {text: 'Mow the lawn', completed: false}
-      ]
+      ],
+      newTaskText: ""
+    },
+    methods: {
+      addTask: function() {
+        var newTask = {text: this.newTaskText, completed: false};
+        this.tasks.push(newTask);
+        this.newTaskText = "";
+      }
     }
   });
 });
